@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.open-meteo.com;">
+    <title>Новая вкладка</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!--<script>function openURL(url){
+        if(url.startsWith("https://")){
+            document.location.href = url
+        }else{
+            document.location.href = "https://" + url
+        }
+    }
+    
+    function isURL(text){
+        var urlPattern = new RegExp('^(https?:\\/\\/)?'+ // validate protocol
+            '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // validate domain name
+            '((\\d{1,3}\\.){3}\\d{1,3}))'+ // validate OR ip (v4) address
+            '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // validate port and path
+            '(\\?[;&a-z\\d%_.~+=-]*)?'+ // validate query string
+            '(\\#[-a-z\\d_]*)?$','i'); // validate fragment locator
+          return !!urlPattern.test(text);
+    }
+    
+    window.onload = () => {
+        let motds = ["Привет!", "Поищи что-нибудь", "мгемгемгемгемге", 
+            "Why do we all have to wear those riddiculous ties?", "Бум, в голову!", 
+            "Получи, слащавый педик!", "а может... нет", "Gordon Freeman! And about time too!", 
+            "Sometimes I dream about... cheese...", "80 words/min peak", 
+            "...И мне плевать, я после смерти отправлюсь в фазу вченого сна...",
+            "F = ma", "F = mv", "F = mg", "print(\"Hello world!\")",
+            "puts \"Hello world!\"", "based", "Firefox!", "DuckDuckGo", "Время сделать commit!",
+            "опять?", "вкладка", "Сумашедшая собака мне отгрызла пару пальцев (да и похуй)",
+            "Тимоха! Чё ты делаешь!? Это git commit -f", "Search 100", "не вспоминай", "Я тренеровался до 6-ти часов утра!",
+            "Время не вернуть обратно", "1000-7, 993-7, 986-7, ..."
+        ]
+        let motd = document.querySelector("#motd")
+        let searchbox = document.querySelector("#searchbox")
+    
+        motd.textContent = motds[Math.round(Math.random() * (motds.length - 1))]
+    
+        document.addEventListener("keydown", (e) => {
+            if(e.key == "Enter"){
+                if(searchbox === document.activeElement){
+                    if(isURL(searchbox.value)){
+                        openURL(searchbox.value)
+                    }else{
+                        openURL("duckduckgo.com/" + searchbox.value)
+                    }
+                }
+            }
+        })
+    }</script>-->
+    <script src="main.js"></script>
+    <!--<style>
+        :root{
+            --bg-color: #1d1c19;
+            --text-color: #fffbde;
+            --link-color: #fffbde;
+            --link-bg-color: #294f7a;
+
+            --box-color: #b8b17d6a;
+            --box-color-hover: #b8b17d93;
+        }
+
+        body{
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: Source Code Pro Lightweight;
+            font-size: 1.4vw;
+            user-select: none;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        a{
+            color: var(--link-color);
+        }
+        a:visited{
+            background-color: var(--link-bg-color);
+        }
+
+        div{
+            background-color: var(--box-color);
+            transition: 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 8px;
+            min-height: 5vw;
+            min-width: 25vw;
+            padding: 0 1em 0 0;
+            cursor: pointer;
+        }
+        div:hover{
+            background-color: var(--box-color-hover);
+        }
+
+        img{
+            width: 2em;
+            filter: sepia(0.7)
+        }
+
+        input{
+            background: var(--bg-color);
+            border: 4px solid var(--text-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-family: Source Code Pro;
+            font-size: 1em;
+            min-width: 50%;
+            min-height: 32px;
+            padding: 8px;
+            transition: 0.1s;
+        }
+        input:focus{
+            outline: none;
+        }
+        input::selection{
+            background-color: var(--link-bg-color);
+        }
+
+        .quickBox{
+            background: none;
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            right: 0;
+            width: 42%;
+            height: 100%;
+            padding: 0;
+            cursor: default;
+        }
+        .quickBox:hover{
+            background: none;
+        }
+        .quickBox > div:first-child{
+            border-top-right-radius: 20px;
+        }
+        .quickBox > div:last-child{
+            border-bottom-right-radius: 20px;
+        }
+
+        .searchBar{
+            position: absolute;
+            left: 0;
+            width: 55%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: end;
+            cursor: default;
+        }
+        .searchBar:hover{
+            background: none;
+        }
+
+        h1{
+            text-align: right;
+            margin: 0;
+            transition: 0.1s;
+        }
+
+        h2{
+            font-style: italic;
+            font-size: 1em;
+            color: gray;
+            transition: 0.1s;
+        }
+    </style>-->
+</head>
+<body>
+    <div class="widgets">
+        <!-- Note: change it with main.js:60 -->
+        <div class="weather">
+            <p>Витебск</p>
+            <p id="temp-Vitebsk">20 C</p>
+            <p id="wind-Vitebsk">0 м/с</p>
+            <p id="humid-Vitebsk">40%</p>
+        </div>
+        <div class="weather">
+            <p>Бобруйск</p>
+            <p id="temp-Bobruisk">20 C</p>
+            <p id="wind-Bobruisk">0 м/с</p>
+            <p id="humid-Bobruisk">40%</p>
+        </div>
+    </div>
+    <div class="searchBar">
+        <h1>Новая вкладка</h1>
+        <h2 id="motd"></h2>
+        <input id="searchbox" type="text" autofocus>
+    </div>
+    <div class="quickBox">
+        <!-- Note: you can add up to eight buttons here (nine and more buttons will bug out of the page) -->
+        <div id="youtube" onclick="openURL('https:\/\/youtube.com')">
+            <p>Youtube</p>
+            <img src="styles/imgs/yt.png" alt="">
+        </div>
+        <div id="github" onclick="openURL('https:\/\/github.com')">
+            <p>Github</p>
+            <img src="styles/imgs/github.png" alt="">
+        </div>
+        <div id="reddit" onclick="openURL('https:\/\/reddit.com')">
+            <p>Reddit</p>
+            <img src="styles/imgs/reddit.png" alt="">
+        </div>
+        <div id="ai" onclick="openURL('https:\/\/duck.ai')">
+            <p>DuckDuckGo AI</p>
+            <img src="styles/imgs/ddg.png" alt="">
+        </div>
+        </div>
+    </div>
+</body>
+</html>
